@@ -1,15 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { fn } from '@storybook/test';
 
-import { HeaderComponent } from './header.component';
+import { UiHeaderComponent } from '../lib/ui-header/ui-header.component';
 
-const meta: Meta<HeaderComponent> = {
+const meta: Meta<UiHeaderComponent> = {
   title: 'Example/Header',
-  component: HeaderComponent,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  component: UiHeaderComponent,
   tags: ['autodocs'],
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
   args: {
@@ -20,7 +18,7 @@ const meta: Meta<HeaderComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<HeaderComponent>;
+type Story = StoryObj<UiHeaderComponent>;
 
 export const LoggedIn: Story = {
   args: {

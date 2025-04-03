@@ -1,19 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { expect, userEvent, within } from '@storybook/test';
 
-import { PageComponent } from './page.component';
+import { UiPageComponent } from '../lib/ui-page/ui-page.component';
 
-const meta: Meta<PageComponent> = {
+const meta: Meta<UiPageComponent> = {
   title: 'Example/Page',
-  component: PageComponent,
+  component: UiPageComponent,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
 };
 
 export default meta;
-type Story = StoryObj<PageComponent>;
+type Story = StoryObj<UiPageComponent>;
 
 export const LoggedOut: Story = {};
 
