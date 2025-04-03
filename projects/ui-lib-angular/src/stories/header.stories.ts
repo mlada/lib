@@ -4,7 +4,7 @@ import { fn } from '@storybook/test';
 import { UiHeaderComponent } from '../lib/ui-header/ui-header.component';
 
 const meta: Meta<UiHeaderComponent> = {
-  title: 'Example/Header',
+  title: 'Components/Header',
   component: UiHeaderComponent,
   tags: ['autodocs'],
   parameters: {

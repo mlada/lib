@@ -47,7 +47,43 @@ import { UiButtonComponent } from '../ui-button/ui-button.component';
     </div>
   </div>
 </header>`,
-  styleUrls: ['./ui-header.css'],
+  styles: [
+    `.ui-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 15px 20px;
+      font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .ui-header svg {
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+      height: 38px;
+    }
+
+    .ui-header h1 {
+      display: inline-block;
+      vertical-align: top;
+      margin: 6px 0 6px 10px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .ui-header button + button {
+      margin-left: 10px;
+    }
+
+    .ui-header .welcome {
+      margin-right: 10px;
+      color: #333;
+      font-size: 14px;
+    }
+    `
+  ],
 })
 export class UiHeaderComponent {
   @Input()

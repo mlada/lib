@@ -4,7 +4,7 @@ import { expect, userEvent, within } from '@storybook/test';
 import { UiPageComponent } from '../lib/ui-page/ui-page.component';
 
 const meta: Meta<UiPageComponent> = {
-  title: 'Example/Page',
+  title: 'Components/Page',
   component: UiPageComponent,
   parameters: {
     layout: 'fullscreen',

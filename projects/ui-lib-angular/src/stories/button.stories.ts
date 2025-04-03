@@ -4,7 +4,7 @@ import { fn } from '@storybook/test';
 import { UiButtonComponent } from '../lib/ui-button/ui-button.component';
 
 const meta: Meta<UiButtonComponent> = {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: UiButtonComponent,
   tags: ['autodocs'],
   argTypes: {

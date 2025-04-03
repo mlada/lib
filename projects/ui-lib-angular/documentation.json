@@ -11,6 +11,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    links: [\n      {\n        title: 'Компания',\n        links: [\n          { text: 'О нас', url: '/about' },\n          { text: 'Карьера', url: '/careers' },\n          { text: 'Контакты', url: '/contact' },\n        ],\n      },\n      {\n        title: 'Ресурсы',\n        links: [\n          { text: 'Документация', url: '/docs' },\n          { text: 'Блог', url: '/blog' },\n          { text: 'Поддержка', url: '/support' },\n        ],\n      },\n    ],\n    socialLinks: [\n      {\n        name: 'Twitter',\n        url: 'https://twitter.com',\n        icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg',\n      },\n      {\n        name: 'Facebook',\n        url: 'https://facebook.com',\n        icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg',\n      },\n    ],\n    user: null,\n  },\n}"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -67,8 +77,18 @@
                 "file": "projects/ui-lib-angular/src/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  args: { onClick: fn() },\n}"
+                "type": "Meta<UiButtonComponent>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: UiButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  args: { onClick: fn() },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UiFooterComponent>",
+                "defaultValue": "{\n  title: 'Components/UiFooter',\n  component: UiFooterComponent,\n  tags: ['autodocs'],\n  render: (args: UiFooterComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {\n    links: {\n      control: 'object',\n      description: 'Массив колонок с ссылками',\n    },\n    socialLinks: {\n      control: 'object',\n      description: 'Массив ссылок на соцсети',\n    },\n    user: {\n      control: 'object',\n      description: 'Данные пользователя (если авторизован)',\n    },\n  },\n}"
             },
             {
                 "name": "meta",
@@ -77,8 +97,8 @@
                 "file": "projects/ui-lib-angular/src/stories/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                "type": "Meta<UiHeaderComponent>",
+                "defaultValue": "{\n  title: 'Example/Header',\n  component: UiHeaderComponent,\n  tags: ['autodocs'],\n  parameters: {\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
             },
             {
                 "name": "meta",
@@ -87,8 +107,28 @@
                 "file": "projects/ui-lib-angular/src/stories/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<PageComponent>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                "type": "Meta<UiPageComponent>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: UiPageComponent,\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "Minimal",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    links: [\n      {\n        title: 'Правовая информация',\n        links: [\n          { text: 'Условия использования', url: '/terms' },\n          { text: 'Политика конфиденциальности', url: '/privacy' },\n        ],\n      },\n    ],\n    socialLinks: [],\n    user: null,\n  },\n}"
+            },
+            {
+                "name": "MobileView",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: Default.args,\n  parameters: {\n    viewport: {\n      defaultViewport: 'mobile1',\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -129,6 +169,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "WithUser",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Default.args,\n    user: {\n      name: 'Иван Петров',\n      email: 'ivan@example.com',\n    },\n  },\n}"
             }
         ],
         "functions": [],
@@ -137,7 +187,7 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ButtonComponent>",
+                "rawtype": "StoryObj<UiButtonComponent>",
                 "file": "projects/ui-lib-angular/src/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -148,7 +198,18 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<HeaderComponent>",
+                "rawtype": "StoryObj<UiFooterComponent>",
+                "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UiHeaderComponent>",
                 "file": "projects/ui-lib-angular/src/stories/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -159,7 +220,7 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<PageComponent>",
+                "rawtype": "StoryObj<UiPageComponent>",
                 "file": "projects/ui-lib-angular/src/stories/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -169,6 +230,58 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/ui-lib-angular/src/stories/footer.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    links: [\n      {\n        title: 'Компания',\n        links: [\n          { text: 'О нас', url: '/about' },\n          { text: 'Карьера', url: '/careers' },\n          { text: 'Контакты', url: '/contact' },\n        ],\n      },\n      {\n        title: 'Ресурсы',\n        links: [\n          { text: 'Документация', url: '/docs' },\n          { text: 'Блог', url: '/blog' },\n          { text: 'Поддержка', url: '/support' },\n        ],\n      },\n    ],\n    socialLinks: [\n      {\n        name: 'Twitter',\n        url: 'https://twitter.com',\n        icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg',\n      },\n      {\n        name: 'Facebook',\n        url: 'https://facebook.com',\n        icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg',\n      },\n    ],\n    user: null,\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UiFooterComponent>",
+                    "defaultValue": "{\n  title: 'Components/UiFooter',\n  component: UiFooterComponent,\n  tags: ['autodocs'],\n  render: (args: UiFooterComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {\n    links: {\n      control: 'object',\n      description: 'Массив колонок с ссылками',\n    },\n    socialLinks: {\n      control: 'object',\n      description: 'Массив ссылок на соцсети',\n    },\n    user: {\n      control: 'object',\n      description: 'Данные пользователя (если авторизован)',\n    },\n  },\n}"
+                },
+                {
+                    "name": "Minimal",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    links: [\n      {\n        title: 'Правовая информация',\n        links: [\n          { text: 'Условия использования', url: '/terms' },\n          { text: 'Политика конфиденциальности', url: '/privacy' },\n        ],\n      },\n    ],\n    socialLinks: [],\n    user: null,\n  },\n}"
+                },
+                {
+                    "name": "MobileView",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: Default.args,\n  parameters: {\n    viewport: {\n      defaultViewport: 'mobile1',\n    },\n  },\n}"
+                },
+                {
+                    "name": "WithUser",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Default.args,\n    user: {\n      name: 'Иван Петров',\n      email: 'ivan@example.com',\n    },\n  },\n}"
+                }
+            ],
             "projects/ui-lib-angular/src/stories/button.stories.ts": [
                 {
                     "name": "Large",
@@ -187,8 +300,8 @@
                     "file": "projects/ui-lib-angular/src/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  args: { onClick: fn() },\n}"
+                    "type": "Meta<UiButtonComponent>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: UiButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  args: { onClick: fn() },\n}"
                 },
                 {
                     "name": "Primary",
@@ -249,8 +362,8 @@
                     "file": "projects/ui-lib-angular/src/stories/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                    "type": "Meta<UiHeaderComponent>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: UiHeaderComponent,\n  tags: ['autodocs'],\n  parameters: {\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
                 }
             ],
             "projects/ui-lib-angular/src/stories/page.stories.ts": [
@@ -281,8 +394,8 @@
                     "file": "projects/ui-lib-angular/src/stories/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "type": "Meta<UiPageComponent>",
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: UiPageComponent,\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
                 }
             ],
             "projects/ui-lib-angular/.storybook/preview.ts": [
@@ -306,8 +419,21 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ButtonComponent>",
+                    "rawtype": "StoryObj<UiButtonComponent>",
                     "file": "projects/ui-lib-angular/src/stories/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/ui-lib-angular/src/stories/footer.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UiFooterComponent>",
+                    "file": "projects/ui-lib-angular/src/stories/footer.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -319,7 +445,7 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<HeaderComponent>",
+                    "rawtype": "StoryObj<UiHeaderComponent>",
                     "file": "projects/ui-lib-angular/src/stories/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -332,7 +458,7 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<PageComponent>",
+                    "rawtype": "StoryObj<UiPageComponent>",
                     "file": "projects/ui-lib-angular/src/stories/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -409,6 +535,66 @@
             },
             {
                 "filePath": "projects/ui-lib-angular/src/stories/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Minimal",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MobileView",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-lib-angular/src/stories/footer.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithUser",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui-lib-angular/src/stories/footer.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
